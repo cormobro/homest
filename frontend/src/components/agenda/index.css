@@ -1,0 +1,28 @@
+.agenda {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.agenda__hours__button__free {
+    color: black;
+    background-color: white;
+}
+
+.agenda__hours__button__full {
+    color: black;
+    background-color: grey;
+    pointer-events: none;
+}
+
+.agenda__calendar {
+
+}
+
+.agenda__hours {
+
+}
+
+.agenda__next {
+
+}

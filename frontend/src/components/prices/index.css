@@ -1,0 +1,81 @@
+.prices {
+    position: relative
+}
+
+.prices__image {
+    margin-top: 25vh;
+    height: 100vh;
+    width: 100%;
+    opacity: 0.25;
+    filter: alpha(opacity=25);
+}
+
+.prices__title {
+    position: absolute;
+    top: 0px;
+    text-align: left;
+    margin-top: calc(25vh - 25px);
+    margin-bottom: 0px;
+    margin-left: 30px;
+    color: #707070;
+    font-weight: 400;
+}
+
+.prices__table {
+    margin-left: 60px;
+    position: absolute;
+    top: 40vh;
+}
+
+.prices__table__border2 {
+    width: 60vw;
+    padding-bottom: 8vh;
+    color: #D6490B;
+    font-weight: bold;
+}
+
+.prices__table__border {
+    width: 60vw;
+    height: 50vh;
+    border: 2px solid none;
+    position: relative;
+}
+
+.prices__table__border::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 8vw;
+    bottom: 0px;
+    right: 0px;
+    height: 25vh;
+    border-bottom: 2px solid #D6490B;
+    border-right: 2px solid #D6490B;
+}
+
+
+.prices__table__border::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 8vw;
+    top: 0px;
+    height: 25vh;
+    left: 0vw;
+    border-left: 2px solid #D6490B;
+    border-top: 2px solid #D6490B;
+}
+
+.prices__table__border__cells {
+    padding-right: 30px;
+    padding-left: 30px;
+    color: #707070;
+    font-weight: 600;
+}
+
+.prices__table__border__cells2 {
+    padding-right: 30px;
+    padding-left: 30px;
+    color: #D6490B;
+    font-weight: 600;
+}

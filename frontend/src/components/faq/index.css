@@ -1,0 +1,57 @@
+.faq__title {
+    text-align: left;
+    margin-left: 30px;
+    font-weight: 400;
+    color: #707070;
+}
+
+.faq__question {
+  text-align: left;
+  margin: 30px;
+  margin-bottom: 40px;
+}
+
+.faq__question ul {
+    list-style: none; /* Remove default bullets */
+    color: #707070;
+}
+
+.faq__question ul li::before {
+  content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+  color: #D6490B; /* Change the color */
+  font-weight: bold; /* If you want it to be bold */
+  display: inline-block; /* Needed to add space between the bullet and the text */
+  width: 1em; /* Also needed for space (tweak if needed) */
+  margin-left: -1em; /* Also needed for space (tweak if needed) */
+}
+
+  p {
+    padding-top: 5px;
+    font-style: italic;
+  }
+
+.faq__question__question {
+    color: #D6490B;
+    padding-top: 20px;
+  }
+
+.faq__image {
+  max-height: 154px;
+  overflow: hidden;
+  position: relative;
+}
+
+.faq__image__image {
+  filter: alpha(opacity=33);
+  opacity: 0.33;
+}
+
+.faq__image__copyright{
+  position: absolute;
+  bottom: 0;
+  right: 30px;
+  font-weight: 400;
+  color: #707070;
+  filter: alpha(opacity=70);
+  opacity: 0.7;
+}

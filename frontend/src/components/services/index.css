@@ -1,0 +1,83 @@
+hr {
+    border: 1px solid #D6490B;
+    width: 25%;
+}
+
+.services__advantages {
+    display: flex;
+    justify-content: space-evenly;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.services__title {  
+    text-align: left;
+    color: #707070;
+    margin-left: 30px;
+    font-weight: 400;
+    padding-bottom: 20px;
+}
+
+.services__advantages__quality {
+    width: 25vw;
+}
+
+.services__advantages__quality__guaranteed {
+    width: 100px;
+    height: 100px;
+}
+
+.services__advantages__quality__name {
+    text-align: center;
+    color: #D6490B;
+}
+
+.services__advantages__quality__quote {
+    color: #707070;
+}
+
+.services__secondTitle {
+    color: #707070;
+}
+
+.services__statusQuo {
+    display: flex;
+    justify-content: space-evenly;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.services__statusQuo ul {
+    list-style: none; /* Remove default bullets */
+    color: #707070;
+    text-align: left; 
+}
+
+.services__statusQuo ul li::before {
+    content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+    color: #D6490B; /* Change the color */
+    font-weight: bold; /* If you want it to be bold */
+    display: inline-block; /* Needed to add space between the bullet and the text */
+    width: 1em; /* Also needed for space (tweak if needed) */
+    margin-left: -1em; /* Also needed for space (tweak if needed) */
+}
+
+.services__statusQuo__item1 {
+    border-style: solid;
+    border-width: 1.5px;
+    margin-right: 10px; 
+    width: 45vw;
+    border-color: #707070;
+}
+
+.services__statusQuo__item2 {
+    border-style: solid;
+    border-width: 1.5px;
+    margin-left: 10px;
+    width: 45vw;
+    border-color: #707070;
+}
+
+.services__statusquo__item__title {
+    color: #D6490B;
+}
