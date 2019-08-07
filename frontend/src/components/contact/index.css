@@ -34,11 +34,13 @@ textarea:focus, input:focus, select:focus {
 
 .contact__form__1__item1 {
     flex-grow: 1;
+    margin-bottom: 1.25vw;
 }
 
 .contact__form__1__item2 {
     flex-grow: 1;
     width: 100%;
+    margin-bottom: 1.25vw;
 }
 
 .contact__form__1__item3 {
@@ -46,7 +48,16 @@ textarea:focus, input:focus, select:focus {
     width: 100%;
 }
 
-.contact__form__input {
+.contact__form__input1 {
+    border: 1px solid #707070;
+    border-radius: 6px;
+    color: #707070;
+    padding: 12px 20px;
+    width: calc( 50% - 82px );
+    margin-right: 1.25vw;
+}
+
+.contact__form__input2 {
     border: 1px solid #707070;
     border-radius: 6px;
     color: #707070;
@@ -69,7 +80,7 @@ textarea:focus, input:focus, select:focus {
 }
 
 .contact__form__input__scroll {
-    width: calc( 100% - 80px );
+    width: calc( 100% - 80px + 1.25vw );
     border: 1px solid #707070;
     border-radius: 6px;
     color: #707070;
@@ -77,7 +88,7 @@ textarea:focus, input:focus, select:focus {
 }
 
 .contact__form__input__mail {
-    width: calc( 100% - 122px );
+    width: calc( 100% - 122px + 1.25vw );
     border: 1px solid #707070;
     border-radius: 6px;
     color: #707070;

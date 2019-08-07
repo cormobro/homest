@@ -39,7 +39,7 @@ class Agendapage extends Component {
   return (
     <div className="calendar">
       <h1 className="calendar__title">RENDEZ-VOUS</h1>
-      {this.state.clicked ? <Form handleClicked={this.handleClicked} selectedTime={this.state.selectedTime} selectedDate={this.state.selectedDates} /> : <Agenda handleClicked={this.handleClicked} handleTimeClick={this.handleTimeClick} selectedTime={this.state.selectedTime} calendar={this.props.calendar} activeressources={this.props.activeressources} disabledDays={this.props.disabledDays} handleDateClick={this.handleDateClick} />}
+      {this.state.clicked ? <Form className="calendar__form" handleClicked={this.handleClicked} selectedTime={this.state.selectedTime} selectedDate={this.state.selectedDates} /> : <Agenda handleClicked={this.handleClicked} handleTimeClick={this.handleTimeClick} selectedTime={this.state.selectedTime} calendar={this.props.calendar} activeressources={this.props.activeressources} disabledDays={this.props.disabledDays} handleDateClick={this.handleDateClick} />}
     </div>
   );
   }

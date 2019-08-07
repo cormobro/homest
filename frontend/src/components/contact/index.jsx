@@ -11,8 +11,8 @@ const Contact = () => (
             <form action="post" method="get" className="contact__form">
                 <div className="contact__form__1">
                     <div className="contact__form__1__item1">
-                        <input className="contact__form__input" type="text" name="name" id="name" required placeholder="nom"></input>
-                        <input className="contact__form__input" type="text" name="firstname" id="firstname" required placeholder="prénom"></input>
+                        <input className="contact__form__input1" type="text" name="name" id="name" required placeholder="nom"></input>
+                        <input className="contact__form__input2" type="text" name="firstname" id="firstname" required placeholder="prénom"></input>
                     </div>
                     <div className="contact__form__1__item2">
                         <input className="contact__form__input__mail" type="mail" name="mail" id="mail" required placeholder="adresse email"></input>

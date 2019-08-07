@@ -2,27 +2,107 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+    padding-top: 50px;
+}
+
+.agenda__hours__button0 {
+    padding-bottom: 67.75px;
+}
+
+.agenda__hours__button1 {
+    padding-top: 45px;
+    padding-bottom: 45px;
+}
+
+.agenda__hours__button2 {
+    padding-top: 67.75px;
 }
 
 .agenda__hours__button__free {
-    color: black;
-    background-color: white;
+    -webkit-border-radius: 28;
+    -moz-border-radius: 28;
+    border-radius: 28px;
+    border-width: 0;
+    color: white;
+    font-size: 20px;
+    background: #D6490B;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+    outline: 0;
+}
+
+.agenda__hours__button__free:hover {
+    background: #e67c4e;
+    text-decoration: none;
+    outline: 0;
 }
 
 .agenda__hours__button__full {
-    color: black;
-    background-color: grey;
+    color: #ada6a5;
+    background: #918b8a;
     pointer-events: none;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+    outline: 0;
+    -webkit-border-radius: 28;
+    -moz-border-radius: 28;
+    border-radius: 28px;
+    border-width: 0;
+    font-size: 20px;
 }
 
 .agenda__calendar {
+    position: relative;
+    min-height: 545px;
+}
 
+.agenda__calendar__title {
+    color: #D6490B;
+    padding-top: 40px;
+    padding-bottom: 20px;
 }
 
 .agenda__hours {
+    position: relative;
+    min-height: 545px;
+    min-width: 200px;
+}
 
+.agenda__next__selectedTime {
+    margin-bottom: 133.333px;
+    margin-top: 234.67px;
+    border: solid #D6490B 3px;
+    font-weight: bold;
 }
 
 .agenda__next {
+    position: relative;
+    min-height: 545px;
+}
 
+.agenda__next__button {
+    padding-bottom: 133.333px;
+}
+
+.agenda__next__button__button {
+    -webkit-border-radius: 28;
+    -moz-border-radius: 28;
+    border-radius: 28px;
+    border-width: 0;
+    color: black;
+    font-size: 20px;
+    background: #D6490B;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+    outline: 0;
+    font-weight: bold;
+}
+
+.agenda__next__button__button:hover {
+    background: #e67c4e;
+    text-decoration: none;
+    outline: 0;
 }

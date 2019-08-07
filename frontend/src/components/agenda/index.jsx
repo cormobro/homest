@@ -70,7 +70,7 @@ class Agenda extends Component {
     return (
         <div className="agenda">
         <div className="agenda__calendar">
-          <h4>DATE DESIREE</h4>
+          <h4 className="agenda__calendar__title">DATE DESIREE</h4>
           <InfiniteCalendar
             width={400}
             height={400}
@@ -123,14 +123,14 @@ class Agenda extends Component {
           />
         </div>
         <div className="agenda__hours">
-            <h4>HEURES DISPONIBLES</h4>
-            {this.props.selectedTime}
-            <div><button type="button" className={this.state.firstmeeting ? 'agenda__hours__button__free' : 'agenda__hours__button__full'} value="09:00 -> 12:00" onClick={this.props.handleTimeClick}>09:00 -> 12:00</button></div>
-            <div><button type="button" className={this.state.secondmeeting ? 'agenda__hours__button__free' : 'agenda__hours__button__full'} value="12:00 -> 15:00" onClick={this.props.handleTimeClick}>12:00 -> 15:00</button></div>
-            <div><button type="button" className={this.state.thirdmeeting ? 'agenda__hours__button__free' : 'agenda__hours__button__full'} value="15:00 -> 18:00" onClick={this.props.handleTimeClick}>15:00 -> 18:00</button></div>
+            <h4 className="agenda__calendar__title">HEURES DISPONIBLES</h4>
+            <div className="agenda__hours__button1"><button type="button" className={this.state.firstmeeting ? 'agenda__hours__button__free' : 'agenda__hours__button__full'} value="09:00 à 12:00" onClick={this.props.handleTimeClick}>09:00 à 12:00</button></div>
+            <div className="agenda__hours__button1"><button type="button" className={this.state.secondmeeting ? 'agenda__hours__button__free' : 'agenda__hours__button__full'} value="12:00 à 15:00" onClick={this.props.handleTimeClick}>12:00 à 15:00</button></div>
+            <div className="agenda__hours__button1"><button type="button" className={this.state.thirdmeeting ? 'agenda__hours__button__free' : 'agenda__hours__button__full'} value="15:00 à 18:00" onClick={this.props.handleTimeClick}>15:00 à 18:00</button></div>
         </div>
         <div className="agenda__next">
-          <button type="button" className="agenda__next__button" onClick={this.props.handleClicked}>CONFIRMER DATE ET HEURE</button>
+          <div className="agenda__next__selectedTime">{this.props.selectedTime}</div>
+          <div className="agenda__next__button"><button type="button" className="agenda__next__button__button" onClick={this.props.handleClicked}>Continuer la réservation</button></div>
         </div>
         </div>
     );

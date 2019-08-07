@@ -49,37 +49,38 @@ class Form extends Component {
   
     render() {
     return (
-      <div>
-            <p>Réservation pour le {this.props.selectedDate.slice(0, 10)} de {this.props.selectedTime}</p>
-            <form action="post" method="post" className="clientform" onSubmit={this.handleSubmit}>
-                <div className="">
-                    <p>1.Données personnelles</p>
-                    <div className="">
-                        <input className="" type="text" name="name" id="0" onChange={this.handleChange} required placeholder="nom"></input>
-                        <input className="" type="text" name="firstname" id="1" onChange={this.handleChange} required placeholder="prénom"></input>
+      <div className="form">
+            <form className="form__form" action="post" method="post" className="clientform" onSubmit={this.handleSubmit}>
+            <p className="form__reservation">Réservation pour le {this.props.selectedDate.slice(0, 10)} de {this.props.selectedTime}</p>
+                <div className="form__form">
+                <div className="form__form1">
+                    <p className="form__subtitles">1. Données personnelles</p>
+                    <div className="form__form1__div1">
+                        <input className="form__form1__div1__name" type="text" name="name" id="0" onChange={this.handleChange} required placeholder="nom"></input>
+                        <input className="form__form1__div1__firstname" type="text" name="firstname" id="1" onChange={this.handleChange} required placeholder="prénom"></input>
                     </div>
-                    <div className="">
-                        <input className="" type="number" name="phonenumber" id="2" onChange={this.handleChange} required placeholder="numéro de téléphone"></input>
+                    <div className="form__form1__div2">
+                        <input className="form__form1__div2__phonenumber" type="number" name="phonenumber" id="2" onChange={this.handleChange} required placeholder="numéro de téléphone"></input>
                     </div>
-                    <div className="">
-                        <input className="" type="email" name="email" id="3" onChange={this.handleChange} required placeholder="adresse mail"></input>
+                    <div className="form__form1__div3">
+                        <input className="form__form1__div3__email" type="email" name="email" id="3" onChange={this.handleChange} required placeholder="adresse mail"></input>
                     </div>
-                    <p>2.Adresse pour le jour-même</p>
-                    <div className="">
-                        <input className="" type="text" name="street" id="4" onChange={this.handleChange} required placeholder="rue"></input>
+                    <p className="form__subtitles">2. Adresse pour le jour-même</p>
+                    <div className="form__form1__div4">
+                        <input className="form__form1__div4__street" type="text" name="street" id="4" onChange={this.handleChange} required placeholder="rue"></input>
                     </div>
-                    <div className="">
-                        <input className="" type="number" name="number" id="5" onChange={this.handleChange} required placeholder="numéro"></input>
-                        <input className="" type="number" name="boxnumber" id="6" onChange={this.handleChange} required placeholder="boite"></input>
+                    <div className="form__form1__div5">
+                        <input className="form__form1__div5__number" type="number" name="number" id="5" onChange={this.handleChange} required placeholder="numéro"></input>
+                        <input className="form__form1__div5__boxnumber" type="number" name="boxnumber" id="6" onChange={this.handleChange} required placeholder="boite"></input>
                     </div>
-                    <div className="">
-                        <input className="" type="text" name="locality" id="7" onChange={this.handleChange} required placeholder="localité"></input>
+                    <div className="form__form1__div6">
+                        <input className="form__form1__div6__locality" type="text" name="locality" id="7" onChange={this.handleChange} required placeholder="localité"></input>
                     </div>
                 </div>
-                <div className="">
-                    <p>3.Renseignement du bien</p>
-                    <div className="">
-                        <select className="" name="bien" id="8" value={this.state.informations[8]} onChange={this.handleChange}>
+                <div className="form__form2">
+                    <p className="form__subtitles">3. Renseignement du bien</p>
+                    <div className="form__form2__div1">
+                        <select className="form__form2__div1__select" name="bien" id="8" value={this.state.informations[8]} onChange={this.handleChange}>
                             <option value="Type de bien">Type de bien</option>
                             <option value="Appartement">Appartement</option>
                             <option value="Maison de ville">Maison de ville</option>
@@ -88,8 +89,8 @@ class Form extends Component {
                             <option value="Studio">Studio</option>
                         </select>
                     </div>
-                    <div className="">
-                        <select className="" name="rooms" id="9" value={this.state.informations[9]} onChange={this.handleChange}>
+                    <div className="form__form2__div2">
+                        <select className="form__form2__div2__select" name="rooms" id="9" value={this.state.informations[9]} onChange={this.handleChange}>
                             <option value="nombre de chambres">Nombre de chambres</option>
                             <option value="1">1</option>
                             <option value="2">2</option>
@@ -103,19 +104,21 @@ class Form extends Component {
                             <option value="10">10</option>
                         </select>
                     </div>
-                    <div className="">
+                    <div className="form__form2__div3">
+                        <div className="form__form2__div3__div"><label for="bailleur" className="form__form2__div3__label">
                         <input type="radio" id="bailleur" name="status" value="bailleur"  onClick={this.handleRadioButton} />
-                        <label for="bailleur">Bailleur</label>
+                        Bailleur<span className="checkmark"></span></label></div>
+                        <div className="form__form2__div3__div2"><label for="locataire" className="form__form2__div3__label">
                         <input type="radio" id="locataire" name="status" value="locataire" onClick={this.handleRadioButton} />
-                        <label for="locataire">Locataire</label>
+                        Locataire<span className="checkmark"></span></label></div>
                     </div>
-                    <textarea className="" name="message" id="11" maxlength="500" placeholder="Message ..." onChange={this.handleChange}></textarea>
+                    <textarea className="form__form2__textarea" name="message" id="11" maxlength="500" placeholder="Message ..." onChange={this.handleChange}></textarea>
                 </div>
-                <div className="">
-                    <input className="" type="submit" value="Envoyez" />
+                <div className="form__form3__div">
+                <button className="form__form3__div__button" value="okay" onClick={this.handleSubmit}>Réservez</button>
+                </div>
                 </div>
             </form>
-            <button value="okay" onClick={this.handleSubmit}>Okay</button>
       </div>
     );
     }

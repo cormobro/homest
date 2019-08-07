@@ -34,7 +34,7 @@ const Services = () => (
             </div>
         </div>
         <div className="services__secondTitle">
-            <h1>- ETATS DES LIEUX -</h1>
+            <h1>&bull; ETATS DES LIEUX &bull;</h1>
         </div>
         <div className="services__statusQuo">
             <div className="services__statusQuo__item1">

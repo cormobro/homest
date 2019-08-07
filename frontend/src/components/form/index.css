@@ -1,0 +1,305 @@
+.form__reservation {
+    position:absolute;
+    top: calc(50% - 295px); 
+    color: #D6490B;
+    font-weight: bold;
+    text-align: left;
+    font-size: 1.3em;
+    padding-left: 3vw;
+}
+
+.form__form {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100vh;
+}
+
+.form__form1__div1 {
+    margin-bottom: 1.25vw;
+}
+
+.form__form1__div1__name {
+    width: 12.5vw;
+    height: 1.8vw;
+    margin-right: 1.25vw;
+    border: 1px solid #707070;
+    border-radius: 6px;
+    color: #707070;
+    padding: 12px 20px;
+}
+
+.form__form1__div1__firstname {
+    width: 12.5vw;
+    height: 1.8vw;
+    border: 1px solid #707070;
+    border-radius: 6px;
+    color: #707070;
+    padding: 12px 20px;
+}
+
+.form__form1__div2 {
+    margin-bottom: 1.25vw;
+}
+
+.form__form1__div2__phonenumber {
+    width: calc(26.25vw + 42px);
+    height: 1.8vw;
+    border: 1px solid #707070;
+    border-radius: 6px;
+    color: #707070;
+    padding: 12px 20px;
+}
+
+.form__form1__div3 {
+    padding-bottom: 2vw;
+}
+
+.form__form1__div3__email {
+    width: calc(26.25vw + 42px);
+    height: 1.8vw;
+    border: 1px solid #707070;
+    border-radius: 6px;
+    color: #707070;
+    padding: 12px 20px;
+}
+
+.form__form1__div4 {
+    margin-bottom: 1.25vw;
+}
+
+.form__form1__div4__street {
+    width: calc(26.25vw + 42px);
+    height: 1.8vw;
+    border: 1px solid #707070;
+    border-radius: 6px;
+    color: #707070;
+    padding: 12px 20px;
+}
+
+.form__form1__div5 {
+    margin-bottom: 1.25vw;
+}
+
+.form__form1__div5__number {
+    width: 12.5vw;
+    height: 1.8vw;
+    margin-right: 1.25vw;
+    border: 1px solid #707070;
+    border-radius: 6px;
+    color: #707070;
+    padding: 12px 20px;
+}
+
+.form__form1__div5__boxnumber {
+    width: 12.5vw;
+    height: 1.8vw;
+    border: 1px solid #707070;
+    border-radius: 6px;
+    color: #707070;
+    padding: 12px 20px;
+}
+
+.form__form1__div6__locality {
+    width: calc(26.25vw + 42px); 
+    height: 1.8vw;
+    border: 1px solid #707070;
+    border-radius: 6px;
+    color: #707070;
+    padding: 12px 20px;
+}
+
+.form__form2__div1 {
+    margin-bottom: 1.25vw;
+}
+
+.form__form2__div1__select {
+    width: calc(26.25vw + 42px); 
+    height: calc(1.8vw + 26px);
+    border: 1px solid #707070;
+    border-radius: 6px;
+    color: #707070;
+}
+
+.form__form2__div2 {
+    margin-bottom: 1.25vw;
+}
+
+.form__form2__div2__select {
+    width: calc(26.25vw + 42px); 
+    height: calc(1.8vw + 26px);
+    border: 1px solid #707070;
+    border-radius: 6px;
+    color: #707070;
+}
+
+.form__form2__div3 {
+    height: calc(1.8vw + 2px);
+    margin-bottom: calc(58.333px + 2vw);
+    border-radius: 6px;
+    color: #707070;
+    padding: 12px 20px;
+    position: relative;
+}
+
+.form__form2__div3__label {
+    display: inline;
+    position: relative;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.form__form2__div3__label input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #D6490B;
+    border-radius: 50%;
+}
+
+.form__form2__textarea {
+    height: calc(7.9vw + 52px);
+    width: calc(26.25vw + 4px);
+    border: 1px solid #707070;
+    border-radius: 6px;
+    color: #707070;
+    padding: 12px 20px;
+}
+
+.form__form2__div3__label:hover input ~ .checkmark {
+    background-color: #e67c4e;
+}
+
+.form__form2__div3__label input:checked ~ .checkmark {
+    background-color: #D6490B;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: block;
+}
+
+.form__form2__div3__label input:checked ~ .checkmark:after {
+    display: none;
+}
+
+.form__form2__div3__label .checkmark:after {
+    top: 3px;
+   left: 3px;
+   width: 19px;
+   height: 19px;
+   border-radius: 50%;
+   background: #EAEAEA;
+}
+
+span.checkmark {
+    margin-left: 70px;
+}
+
+.form__subtitles {
+    color: #707070;
+    font-weight: 400;
+    font-size: 1.2em;
+}
+
+.form__form2__div3__div {
+    position: absolute;
+    left: 0;
+}
+
+.form__form2__div3__div2 {
+    position: absolute;
+    left: 50%;
+}
+
+.form__form3__div__button {
+    -webkit-border-radius: 28;
+    -moz-border-radius: 28;
+    border-radius: 28px;
+    border-width: 0;
+    color: black;
+    font-size: 20px;
+    background: #D6490B;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+    outline: 0;
+    font-weight: bold;
+}
+
+.form__form3__div__button:hover {
+    background: #e67c4e;
+    text-decoration: none;
+    outline: 0;
+}
+
+p {
+    padding-top: 0px;
+}
+
+@media screen and (max-width: 640px) {
+    .form__form {
+      display: initial;
+      height: auto;
+    }
+    .form__reservation {
+        position: initial;
+        font-size: 0.9em;
+    }
+    .form__form1__div1__name {
+        width: 20vw;
+    }
+    .form__form1__div1__firstname {
+        width: 20vw;
+    }
+    .form__form1__div2__phonenumber {
+        width: calc(41.25vw + 42px);
+    }
+    .form__form1__div3__email {
+        width: calc(41.25vw + 42px);
+    }
+    .form__form1__div4__street {
+        width: calc(41.25vw + 42px);
+    }
+    .form__form1__div5__number {
+        width: 20vw;
+    }
+    .form__form1__div5__boxnumber {
+        width: 20vw;
+    }
+    .form__form1__div6__locality {
+        width: calc(41.25vw + 42px);
+    }
+    .form__form2__div2__select {
+        width: calc(41.25vw + 82px); 
+    }
+    .form__form2__div1__select {
+        width: calc(41.25vw + 82px); 
+    }
+    .form__form2__textarea {
+        width: calc(41.25vw + 40px);
+    }
+    .form__form3__div__button {
+        width: calc(41.25vw + 82px);
+    }
+    .form__form2__div3 {
+        margin-bottom: 5vw;
+    }
+    .form__form2__div3__div {
+        left: 20vw;
+    }
+    .form__form2__div3__div2 {
+        left: 55vw;
+    }
+  }
