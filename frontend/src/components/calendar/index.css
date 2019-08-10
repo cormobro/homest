@@ -17,6 +17,9 @@
 
 @media screen and (max-width: 640px) {
     .calendar__title {
-      top: -45px;
+      top: -30px;
+    }
+    .calendar {
+      height: auto;
     }
   }

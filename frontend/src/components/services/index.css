@@ -25,6 +25,7 @@ hr {
 .services__advantages__quality__guaranteed {
     width: 100px;
     height: 100px;
+    padding-left: 25px;
 }
 
 .services__advantages__quality__name {
@@ -72,7 +73,23 @@ hr {
     border-color: #707070;
 }
 
+.services__statusQuo__item1bis {
+    border-style: solid;
+    border-width: 1.5px;
+    margin-right: 10px; 
+    width: 45vw;
+    border-color: #707070;
+}
+
 .services__statusQuo__item2 {
+    border-style: solid;
+    border-width: 1.5px;
+    margin-left: 10px;
+    width: 45vw;
+    border-color: #707070;
+}
+
+.services__statusQuo__item2bis {
     border-style: solid;
     border-width: 1.5px;
     margin-left: 10px;
@@ -82,4 +99,44 @@ hr {
 
 .services__statusquo__item__title {
     color: #D6490B;
+}
+
+@media only screen and (max-width: 640px) {
+    .services__advantages {
+        margin-left: 0px;
+        margin-right: 0px;
+        display: initial;
+    }
+    .services__advantages__quality {
+        width: 100%;
+    }
+    .services__statusQuo {
+        display: initial;
+    }
+    .services__statusQuo__item1 {
+        width: initial;
+        margin-right: 0;
+        height: initial;
+        overflow: initial;
+        margin-bottom: 2em;
+    }
+    .services__statusQuo__item1bis {
+        width: initial;
+        height: 3.9em;
+        overflow: hidden;
+        margin-right: 0;
+        margin-bottom: 2em;  
+    }
+    .services__statusQuo__item2 {
+        width: initial;
+        height: initial;
+        overflow: initial;
+        margin-left: 0;
+    }
+    .services__statusQuo__item2bis {
+        width: initial;
+        height: 3.9em;
+        overflow: hidden;
+        margin-left: 0;
+    }
 }

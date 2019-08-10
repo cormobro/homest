@@ -33,13 +33,13 @@ const Contact = () => (
         </div>
         <div className="contact__infos">
             <div className="contact__infos__schedule">
-                <table width="50%" className="contact__infos__schedule__table" align="left">
+                <table className="contact__infos__schedule__table">
                     <tr>
-                        <td>Lundi au Vendredi</td>
+                        <td align="left">Lundi au Vendredi</td>
                         <td>08:00 - 19:00</td>
                     </tr>
                     <tr>
-                        <td>Samedi</td>
+                        <td align="left">Samedi</td>
                         <td>08:00 - 17:00</td>
                     </tr>
                 </table>

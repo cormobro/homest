@@ -42,87 +42,106 @@
     filter: alpha(opacity=48);
 }
 
-.bm-burger-button {
-    position: fixed;
-    width: 36px;
-    height: 30px;
-    left: 36px;
-    top: 36px;
-  }
-  
-  /* Color/shape of burger icon bars */
-  .bm-burger-bars {
-    background: #373a47;
-  }
-  
-  /* Position and sizing of clickable cross button */
-  .bm-cross-button {
-    height: 24px;
-    width: 24px;
-  }
-  
-  /* Color/shape of close button cross */
-  .bm-cross {
-    background: #bdc3c7;
-  }
-  
-  /* General sidebar styles */
-  .bm-menu {
-    background: #373a47;
-    padding: 2.5em 1.5em 0;
-    font-size: 1.15em;
-  }
-  
-  /* Morph shape necessary with bubble or elastic */
-  .bm-morph-shape {
-    fill: #373a47;
-  }
-  
-  /* Wrapper for item list */
-  .bm-item-list {
-    color: #b8b7ad;
-  }
-  
-  /* Styling of overlay */
-  .bm-overlay {
-    background: rgba(0, 0, 0, 0.3);
-  }
-
-  .bm-item {
-    display: inline-block;
-  
-    /* Our sidebar item styling */
-    text-decoration: none;
-    margin-bottom: 10px;
-    color: #d1d1d1;
-    transition: color 0.2s;
-  }
-  
-  /* Change color on hover */
-  .bm-item:hover {
-    color: white;
-  }
-
-  .bm-morph-shape {
-    fill: #373a47;
-  }
+.banner__burger {
+    display: none;
+}
 
 @media screen and (max-width: 640px) {
     .banner {
-        height: 10vh;
+        height: 15vh;
     }
     .banner__homest {
-        top: 40%;
         left: -30%;
         width: 35%;
+        transform: initial;
+        top: 2vh;
     }
     .banner__triangle {
         display: none;
     }
     .banner__quote {
         font-size: 0.9em;
-        top: 30%;
+        top: 50%;
         text-align: left;
         margin-left: 2vw;
+    }
+    .banner__burger {
+        display: initial;
+    }
+    .bm-burger-button {
+        position: absolute;
+        width: 36px;
+        height: 30px;
+        right: 0px;
+        top: 36px;
+      }
+      
+      /* Color/shape of burger icon bars */
+      .bm-burger-bars {
+        background: #373a47;
+      }
+      
+      /* Position and sizing of clickable cross button */
+      .bm-cross-button {
+        height: 24px;
+        width: 24px;
+      }
+      
+      /* Color/shape of close button cross */
+      .bm-cross {
+        background: #bdc3c7;
+      }
+      
+      /* General sidebar styles */
+      .bm-menu {
+        background: #3b3b3b;
+        padding: 2.5em 1.5em 0;
+        font-size: 1.15em;
+      }
+      
+      /* Morph shape necessary with bubble or elastic */
+      .bm-morph-shape {
+        fill: #373a47;
+      }
+      
+      /* Wrapper for item list */
+      .bm-item-list {
+        color: #b8b7ad;
+      }
+      
+      /* Styling of overlay */
+      .bm-overlay {
+        background: rgba(0, 0, 0, 0.3);
+      }
+    
+      .bm-item {
+        display: inline-block;
+      
+        /* Our sidebar item styling */
+        text-decoration: none;
+        margin-bottom: 10px;
+        color: #d1d1d1;
+        transition: color 0.2s;
+      }
+      
+      /* Change color on hover */
+      .bm-item:hover {
+        color: white;
+      }
+    
+      .bm-morph-shape {
+        fill: #373a47;
+      }
+}
+
+@media screen and (max-width: 425px) {
+    .banner {
+        height: 10vh;
+    }
+    .banner__quote {
+        top: 30%;
+    }
+    .banner__homest {
+        top: 1.8vh;
     }
 }

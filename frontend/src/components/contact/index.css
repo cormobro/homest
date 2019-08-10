@@ -122,6 +122,7 @@ textarea {
 
 .contact__infos__schedule__table {
     margin-right: 25px;
+    text-align: left;
 }
 
 .contact__infos__phone {
@@ -138,4 +139,95 @@ textarea {
 
 .contact__infos__phone__image {
     display: flex;
+}
+
+@media screen and (max-width: 640px) {
+    .contact__form {
+        display: initial;
+    }
+    .contact__form__1 {
+        width: 100vw;
+    }
+    .contact__form__input1 {
+        width: 50vw;
+        margin-right: 0;
+        margin-bottom: 1.25vw;
+    }
+    .contact__form__input2 {
+        width: 50vw;
+    }
+    .contact__form__input__mail {
+        width: 50vw;
+    }
+    .contact__form__input__scroll {
+        width: calc(50% + 42px);
+        margin-bottom: 1.25vw;
+    }
+    .contact__form__2 {
+        display: initial;
+    }
+    .contact__form__input__message {
+        width: 50vw
+    }
+    .contact__form__input__submit {
+        width: calc(50vw + 42px);
+    }
+    .contact__infos {
+        display: initial;
+    }
+    .contact__infos__schedule {
+        width: initial;
+        position: relative;
+        z-index: 1;
+        margin-right: auto;
+        margin-left: auto;
+        flex-wrap: wrap-reverse;
+        justify-content: center;
+        padding-top: 2em;
+    }
+
+    .contact__infos__schedule:before {
+        content: "";
+        position: absolute;
+        left: 25%;
+        top: 0;
+        height: 1px;
+        width: 50%;
+        border-top: 1px solid #D6490B;
+    }
+    .contact__infos__schedule__table {
+        margin-right: 0;
+        width: 90%;
+        text-align: center;
+        margin-top: 1em;
+        margin-bottom: 1em;
+        font-weight: 600;
+    }
+    .contact__infos__phone {
+        border-left: initial;
+        width: initial;
+        padding-left: 0;
+        width: initial;
+        height: initial;
+        padding-bottom: 2em;
+        position: relative;
+        z-index: 1;
+    }
+    .contact__infos__phone:before {
+        content: "";
+        position: absolute;
+        left: 25%;
+        bottom: 0;
+        height: 1px;
+        width: 50%;
+        border-bottom: 1px solid #D6490B;
+    }
+    .contact__infos__phone__image {
+        display: initial;
+        width: 100%;
+    }
+    .contact__infos__phone p {
+        margin-left: 0;
+        font-weight: 600;
+    }
 }

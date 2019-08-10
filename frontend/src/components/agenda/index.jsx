@@ -72,7 +72,7 @@ class Agenda extends Component {
         <div className="agenda__calendar">
           <h4 className="agenda__calendar__title">DATE DESIREE</h4>
           <InfiniteCalendar
-            width={400}
+            width={"100%"}
             height={400}
             autoFocus={false}
             disabledDays={[6,7]}

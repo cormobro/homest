@@ -23,7 +23,13 @@ class Client extends Component {
       disabledDays: ["2019-07-08T00:00:00.000Z,"],
     };
     this.handleDisabledDays = this.handleDisabledDays.bind(this);
-  };
+    };
+
+  handleDivClick = (event) => {
+    let div = "div" + event.target.id;
+    console.log(div);
+    this.setState({ [event.target.id]: !div})
+  }
 
   handleDisabledDays = () => {
     for(let x = 0; x < this.state.calendar.length; x) {

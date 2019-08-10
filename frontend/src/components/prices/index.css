@@ -79,3 +79,27 @@
     color: #D6490B;
     font-weight: 600;
 }
+
+@media screen and (max-width: 640px) {
+    .prices__table {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .prices__table__border {
+        width: 100%;
+    }
+    .prices__table__border2 {
+        width: 100vw;
+    }
+    .prices__table__border__cells {
+        font-weight: initial;
+        font-size: 0.8em;
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+    .prices__table__border__cells2 {
+        padding-right: 15px;
+        padding-left: 15px;
+        font-weight: 400;
+    }
+}

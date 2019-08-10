@@ -57,6 +57,7 @@
 .agenda__calendar {
     position: relative;
     min-height: 545px;
+    width: 400px;
 }
 
 .agenda__calendar__title {
@@ -105,4 +106,55 @@
     background: #e67c4e;
     text-decoration: none;
     outline: 0;
+}
+
+@media screen and (max-width: 640px) {
+    div.Cal__Container__root {
+        padding-bottom: 30px;
+    }
+    .agenda__hours {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        min-height: initial;
+    }
+    .agenda__calendar {
+        min-height: initial;
+    }
+    .agenda__calendar__title {
+        flex-basis: 100%;
+        max-height: 100px;
+        margin: 0;
+        padding-top: 0px;
+    }
+    .agenda__hours__button1 {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    .agenda__hours__button__free {
+        font-size: 12px;
+        padding: 5px 10px 5px 10px;
+    }
+    .agenda__hours__button__full {
+        font-size: 12px;
+        padding: 5px 10px 5px 10px;
+    }
+    .agenda__next {
+        min-height: initial;
+        padding-bottom: 50px;
+    }
+    .agenda__next__selectedTime {
+        margin-bottom: 30px;
+        margin-top: 30px;
+        font-weight: 600;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .agenda__next__button {
+        padding-bottom: 0;
+    }
+    .agenda__next__button__button {
+        font-size: initial;
+        padding: 5px 10px 5px 10px;
+    }
 }
