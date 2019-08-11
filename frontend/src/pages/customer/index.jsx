@@ -7,6 +7,7 @@ import Contact from '../../components/contact/index.jsx';
 import Faq from '../../components/faq/index.jsx';
 import Navbar from '../../components/navbar/index.jsx';
 import Agendapage from '../../components/calendar/index.jsx';
+import { push as Menu } from 'react-burger-menu'
 
 var today = new Date();
 let mois = today.getMonth().toString();
@@ -21,8 +22,11 @@ class Client extends Component {
       calendar: [{}],
       activeressources: [{}],
       disabledDays: ["2019-07-08T00:00:00.000Z,"],
+      width: 0,
+      height: 0,
     };
     this.handleDisabledDays = this.handleDisabledDays.bind(this);
+    this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
     };
 
   handleDivClick = (event) => {
@@ -47,6 +51,8 @@ class Client extends Component {
   }
 
   componentDidMount(){
+    this.updateWindowDimensions();
+		window.addEventListener('resize', this.updateWindowDimensions);
     fetch(`/api/detail/${ajd}`)
       .then(response => response.json())
       .then(calendar => {this.setState({ calendar })});
@@ -62,15 +68,34 @@ class Client extends Component {
     }
   }
 
+  componentWillUnmount() {
+		window.removeEventListener('resize', this.updateWindowDimensions);
+	}
+	  
+	updateWindowDimensions() {
+		this.setState({ width: window.innerWidth, height: window.innerHeight });
+	}
+
   render() {
   return (
-    <div className="client">
-      <Banner />
-      <Services />
-      <Prices />
-      <Agendapage calendar={this.state.calendar} activeressources={this.state.activeressources} disabledDays={this.state.disabledDays} />
-      <Contact />
-      <Faq /> 
+    <div className="client" id="outer-container">
+      {this.state.width < 655 &&
+			<Menu pageWrapId={ "page-wrap" } outerContainerId={ "outer-container" } className="client__burger" disableAutoFocus right width={ "100%" }>
+			<a id="home" className="menu-item" href="/">Prestations</a>
+			<a id="about" className="menu-item" href="/about">Tarifs</a>
+			<a id="meeting" className="menu-item" href="/contact">Prendre rendez-vous</a>
+			<a id="contact" className="menu-item" href="/contact">Contact</a>
+			<a id="question" className="menu-item" href="/contact">FAQ</a>
+			</Menu>
+      }
+      <div id="page-wrap">
+        <Banner />
+        <Services />
+        <Prices />
+        <Agendapage calendar={this.state.calendar} activeressources={this.state.activeressources} disabledDays={this.state.disabledDays} />
+        <Contact />
+        <Faq />
+      </div> 
     </div>
   );
   }
