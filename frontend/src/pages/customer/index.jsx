@@ -24,16 +24,19 @@ class Client extends Component {
       disabledDays: ["2019-07-08T00:00:00.000Z,"],
       width: 0,
       height: 0,
+      menuOpen: false,
     };
     this.handleDisabledDays = this.handleDisabledDays.bind(this);
     this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
     };
 
-  handleDivClick = (event) => {
-    let div = "div" + event.target.id;
-    console.log(div);
-    this.setState({ [event.target.id]: !div})
-  }
+    handleStateChange (state) {
+      this.setState({menuOpen: state.isOpen})  
+    }
+    
+    closeMenu () {
+      this.setState({menuOpen: false})
+    }
 
   handleDisabledDays = () => {
     for(let x = 0; x < this.state.calendar.length; x) {
@@ -80,21 +83,21 @@ class Client extends Component {
   return (
     <div className="client" id="outer-container">
       {this.state.width < 655 &&
-			<Menu pageWrapId={ "page-wrap" } outerContainerId={ "outer-container" } className="client__burger" disableAutoFocus right width={ "100%" }>
-			<a id="home" className="menu-item" href="/">Prestations</a>
-			<a id="about" className="menu-item" href="/about">Tarifs</a>
-			<a id="meeting" className="menu-item" href="/contact">Prendre rendez-vous</a>
-			<a id="contact" className="menu-item" href="/contact">Contact</a>
-			<a id="question" className="menu-item" href="/contact">FAQ</a>
+			<Menu isOpen={this.state.menuOpen} onStateChange={(state) => this.handleStateChange(state)} pageWrapId={ "page-wrap" } outerContainerId={ "outer-container" } className="client__burger" disableAutoFocus right width={ "100%" }>
+			<a onClick={() => this.closeMenu()} className="menu-item" href="#services">Prestations</a>
+			<a onClick={() => this.closeMenu()} className="menu-item" href="#prices">Tarifs</a>
+			<a onClick={() => this.closeMenu()} className="menu-item" href="#agenda">Prendre rendez-vous</a>
+			<a onClick={() => this.closeMenu()} className="menu-item" href="#contact">Contact</a>
+			<a onClick={() => this.closeMenu()} className="menu-item" href="#faq">FAQ</a>
 			</Menu>
       }
       <div id="page-wrap">
         <Banner />
-        <Services />
-        <Prices />
-        <Agendapage calendar={this.state.calendar} activeressources={this.state.activeressources} disabledDays={this.state.disabledDays} />
-        <Contact />
-        <Faq />
+        <div id="services"><Services /></div>
+        <div id="prices"><Prices /></div>
+        <div id="agenda"><Agendapage calendar={this.state.calendar} activeressources={this.state.activeressources} disabledDays={this.state.disabledDays} /></div>
+        <div id="contact"><Contact /></div>
+        <div id="faq"><Faq /></div>
       </div> 
     </div>
   );

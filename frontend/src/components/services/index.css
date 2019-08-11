@@ -102,6 +102,17 @@ hr {
 }
 
 @media only screen and (max-width: 640px) {
+    .services__title {
+        text-align: center;
+        margin-left: 0;
+        padding-bottom: 0;
+        font-size: 1.8em;
+    }
+    .services__secondTitle h1 {
+        font-size: 1.8em;
+        font-weight: 200;
+        margin-top: 2em;
+    }
     .services__advantages {
         margin-left: 0px;
         margin-right: 0px;
