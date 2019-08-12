@@ -108,9 +108,12 @@
     outline: 0;
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 1024px) {
     div.Cal__Container__root {
         padding-bottom: 30px;
+    }
+    .agenda {
+        flex-direction: column;
     }
     .agenda__hours {
         display: flex;

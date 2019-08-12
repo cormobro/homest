@@ -182,14 +182,15 @@ textarea {
         display: initial;
     }
     .contact__infos__schedule {
-        width: initial;
+        width: 80%;
         position: relative;
         z-index: 1;
         margin-right: auto;
         margin-left: auto;
-        flex-wrap: wrap-reverse;
         justify-content: center;
         padding-top: 2em;
+        flex-direction: column;
+        align-items: center;
     }
 
     .contact__infos__schedule:before {
@@ -204,6 +205,7 @@ textarea {
     .contact__infos__schedule__table {
         margin-right: 0;
         width: 90%;
+        order: 2;
         text-align: center;
         margin-top: 1em;
         margin-bottom: 1em;
@@ -211,13 +213,13 @@ textarea {
     }
     .contact__infos__phone {
         border-left: initial;
-        width: initial;
+        width: 80%;
         padding-left: 0;
-        width: initial;
         height: initial;
         padding-bottom: 2em;
         position: relative;
         z-index: 1;
+        margin: auto;
     }
     .contact__infos__phone:before {
         content: "";
@@ -235,5 +237,17 @@ textarea {
     .contact__infos__phone p {
         margin-left: 0;
         font-weight: 600;
+    }
+    .contact__infos__schedule__img {
+        margin: auto;
+    }
+}
+
+@media screen and (max-width: 426px) {
+    .contact__infos__schedule {
+        width: initial;
+    }
+    .contact__infos__phone {
+        width: initial;   
     }
 }

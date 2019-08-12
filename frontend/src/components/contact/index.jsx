@@ -43,7 +43,7 @@ const Contact = () => (
                         <td>08:00 - 17:00</td>
                     </tr>
                 </table>
-                <img src={Clock} alt="horloge" width="50px" height="50px" />
+                <img className ="contact__infos__schedule__img" src={Clock} alt="horloge" width="50px" height="50px" />
             </div>
             <div className="contact__infos__phone">
                 <div className="contact__infos__phone__image">
