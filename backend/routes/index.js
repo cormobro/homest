@@ -44,6 +44,22 @@ router.get('/api/activeressources', (req, res) => {
 	});	
 });
 
+router.post('/api/newquestion', function (req, res) {
+  var firstname  = req.body.firstname;
+  var name = req.body.name;
+  var mail = req.body.email;
+  var about = req.body.about;
+  var message = req.body.message;
+
+  connection.query('INSERT INTO questions (questionsName, questionsFirstname, questionsMail, questionsAbout, questionsMessage) VALUES ("' + name + '", "' + firstname + '", "' + mail + '", "' + about + '", "' + message + '")', function (error, results) {
+   if (error) {
+     throw error;
+   } else {
+     res.sendStatus(200);
+   }
+ });
+});
+
 router.post('/api/newclient', function (req, res, next) {
   var firstname  = req.body.firstname;
   var name = req.body.name;

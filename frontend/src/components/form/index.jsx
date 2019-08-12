@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './index.css';
+import Popup from "reactjs-popup";
 
 class Form extends Component {
     constructor(props) {
@@ -24,7 +25,8 @@ class Form extends Component {
         this.setState({ informations : informationsCopie });
     }
 
-    handleSubmit() {
+    handleSubmit(e) {
+        e.preventDefault();
         fetch('/api/newclient', {
             method: 'POST',
             headers: {
@@ -50,7 +52,7 @@ class Form extends Component {
     render() {
     return (
       <div className="form">
-            <form className="form__form" action="post" method="post" className="clientform" onSubmit={this.handleSubmit}>
+            <form className="form__form" className="clientform">
             <p className="form__reservation">Réservation pour le {this.props.selectedDate.slice(0, 10)} de {this.props.selectedTime}</p>
                 <div className="form__form">
                 <div className="form__form1">
@@ -115,7 +117,7 @@ class Form extends Component {
                     <textarea className="form__form2__textarea" name="message" id="11" maxlength="500" placeholder="Message ..." onChange={this.handleChange}></textarea>
                 </div>
                 <div className="form__form3__div">
-                <button className="form__form3__div__button" value="okay" onClick={this.handleSubmit}>Réservez</button>
+                <Popup trigger={<button className="form__form3__div__button" value="okay" onClick={this.handleSubmit}>Réservez</button>} modal closeOnDocumentClick><p>Merci pour votre réservation !</p></Popup>
                 </div>
                 </div>
             </form>

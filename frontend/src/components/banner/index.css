@@ -63,6 +63,12 @@
     }
 }
 
+@media (orientation: landscape) and (max-width : 640px) {
+    .banner {
+        height: 20vh;
+    }
+}
+
 @media screen and (max-width: 425px) {
     .banner {
         height: 10vh;
