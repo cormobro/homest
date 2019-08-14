@@ -255,7 +255,7 @@ p {
     }
     .form__reservation {
         position: initial;
-        font-size: 0.9em;
+        font-size: 1em;
     }
     .form__form1__div1__name {
         width: 20vw;
@@ -301,5 +301,11 @@ p {
     }
     .form__form2__div3__div2 {
         left: 55vw;
+    }
+  }
+
+  @media screen and (max-width: 425px) {
+    .form__reservation {
+        font-size: 0.8em;
     }
   }

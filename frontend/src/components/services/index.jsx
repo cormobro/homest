@@ -70,6 +70,7 @@ class Services extends React.Component {
                             <li>Au terme de la location, un nouveau constat contradictoire doit être réalisé. L'objectif étant de comparer l'état des lieux d'entrée à celui de la sortie afin de comparer les dommages. Le cas échéant, le locataire devra payer des dommages au propriétaire.</li>
                             <li>L'état des lieux d'entrée ou de sortie peut être réalisé par les 2 parties sans l'intervention d'un expert.
                                 Il doit obligatoirement être joint au contrat de location lors du dépôt de celui-ci auprès du bureau d'enregistrement compétent (voir ici) pour le lieu où se situe l'immeuble loué ou par internet sur le site MyRent.
+                                <br />
                                 Un expert peut également être appelé pour effectuer les états des lieux. En tant qu'expert, Homest utilise les toutes dernières technologies et peut réaliser votre état des lieux dont le rapport sera envoyé endéans les 24 heures.
                             </li>
                         </ul>
