@@ -101,6 +101,19 @@ class Contact extends React.Component {
                     message: this.state.message,
                 })
             })
+            let apiPath = 'http://localhost:3000/backend/routes/message.php'
+            fetch(`${apiPath}`, {
+              method: 'POST',
+              headers: {
+                  'Accept': 'application/json',
+                  'Content-Type': 'application/json',
+              },
+              body: JSON.stringify({
+                  name: this.state.name + this.state.firstname,
+                  email: this.state.email,
+                  message: this.state.message,
+              })
+          })
         }else{
             alert("Certains des champs du formulaire de contact ne sont pas correctement remplis!");
         }
