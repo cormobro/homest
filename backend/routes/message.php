@@ -5,6 +5,9 @@
 //  {leContenuDuMessage} peut être formatter comme on veut, je suggère d'y mettre {à propos} et le {contenu du message}
 
 //récupération des paramètres en POST
+header("Access-Control-Allow-Origin: *");
+$rest_json = file_get_contents("php://input");
+$_POST = json_decode($rest_json, true);
 $name = $_POST['name'];
 $email = $_POST['email'];
 $message = $_POST['message'];
@@ -23,7 +26,7 @@ $message = $_POST['message'];
 
     // renvoi d'un mail au messager pour le remercier d'avoir contacter Homest
 
-    $to = "expert@homest.be";
+    $to = $email;
     $email_subject = "HOMEST: votre message a bien été reçu";
     $email_body = " Nous vous remercions pour votre message,\n\n
                     Un expert de HOMEST vous recontactera le plus rapidement possible à l'adresse suivante ".$mail."\n\n

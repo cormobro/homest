@@ -1,12 +1,21 @@
 import React from 'react';
 import './index.css';
 
-function Ressource() {
+class Login extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+    };
+
+  };
+
+render() {
     return (
-      <div className="client">
+      <div className="Login">
         Login page
       </div>
     );
-  }
+  };
+};
   
-  export default Ressource;
+  export default Login;

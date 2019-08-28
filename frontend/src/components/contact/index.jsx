@@ -86,7 +86,7 @@ class Contact extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         if(validateForm(this.state.errors) && ((this.state.name, this.state.firstname, this.state.email, this.state.about, this.state.message) !== null)) {
-            alert("Votre question a bien été envoyée, merci!");
+            alert("Votre requête a bien été envoyée, merci!");
             fetch('/api/newquestion', {
                 method: 'POST',
                 headers: {
