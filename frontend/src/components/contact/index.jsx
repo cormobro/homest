@@ -101,9 +101,11 @@ class Contact extends React.Component {
                     message: this.state.message,
                 })
             })
-            let apiPath = 'http://localhost:3000/backend/routes/message.php'
+            let apiPath = '/backend/routes/message.php'
             fetch(`${apiPath}`, {
               method: 'POST',
+              mode: "same-origin",
+              credentials: "same-origin",
               headers: {
                   'Accept': 'application/json',
                   'Content-Type': 'application/json',

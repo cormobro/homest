@@ -8,7 +8,6 @@ router.use(bodyParser.urlencoded({
 	extended: true
 }));
 
-
 /* GET home page. */
 router.get('/api/detail/:id', (req, res) => {
   const date = req.params.id;

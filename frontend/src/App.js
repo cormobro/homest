@@ -10,7 +10,7 @@ function App() {
       <BrowserRouter>
       <Switch>
         <Route path={['/', '/accueil']} exact component={Client} />
-        <Route path="/ressource" exact component={Login} />
+        <Route path="/bxQDGAhNPFnLTlk7hWtNNGr0IJg09R3IOXVOVzRZQ3UlcX1t2JJPzicFbt2h" exact component={Login} />
       </Switch>
       </BrowserRouter>
     </div>
