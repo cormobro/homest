@@ -160,6 +160,11 @@ class Form extends Component {
                     time: this.props.selectedTime,
                 })
             });
+            alert("Merci pour votre confiance, un mail de confirmation va vous être envoyé");
+            window.onbeforeunload = function () {
+              window.scrollTo(0, 0);
+            }
+            window.location.reload();
         }else{
             alert("Certains des champs du formulaire ne sont pas correctement remplis!");
         };

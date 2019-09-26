@@ -167,7 +167,7 @@ render () {
                 <div className="contact__infos__phone">
                     <div className="contact__infos__phone__image">
                         <img src={Mail} alt="mail" width="50px" height="50px" />
-                        <p>Homest@gmail.com</p>
+                        <p>expert@homest.be</p>
                     </div>
                 </div>
             </div>

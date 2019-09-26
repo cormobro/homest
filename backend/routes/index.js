@@ -22,8 +22,8 @@ router.get('/api/detail/:id', (req, res) => {
   else {
     end = date.slice(0, 5) + mois + date.slice(7, 10);
   }
-  let query = "SELECT * FROM disponibility WHERE disponibilityDay BETWEEN '" + date + "' AND '" + end +"'";
-	connection.query(query , [date], function (error, results) {
+  let query = "SELECT * FROM disponibility WHERE disponibilityDay BETWEEN ? AND ?";
+	connection.query(query , [date, end], function (error, results) {
 		if (error) {
       console.log(error);
 			res.status(500).send("Erreur lors de la récupération des données");
@@ -44,13 +44,14 @@ router.get('/api/activeressources', (req, res) => {
 });
 
 router.post('/api/newquestion', function (req, res) {
-  var firstname  = req.body.firstname;
-  var name = req.body.name;
-  var mail = req.body.email;
-  var about = req.body.about;
-  var message = req.body.message;
+  let firstname  = req.body.firstname;
+  let name = req.body.name;
+  let mail = req.body.email;
+  let about = req.body.about;
+  let message = req.body.message;
 
-  connection.query('INSERT INTO questions (questionsName, questionsFirstname, questionsMail, questionsAbout, questionsMessage) VALUES ("' + name + '", "' + firstname + '", "' + mail + '", "' + about + '", "' + message + '")', function (error, results) {
+  let query = "INSERT INTO questions (questionsName, questionsFirstname, questionsMail, questionsAbout, questionsMessage) VALUES (?, ?, ?, ?, ?)";
+  connection.query(query, [name, firstname, mail, about, message], function (error, results) {
    if (error) {
      throw error;
    } else {
@@ -70,7 +71,8 @@ router.post('/api/newclient', function (req, res, next) {
   var status = req.body.status;
   var message = req.body.message;
 
-  connection.query('INSERT INTO client (clientFirstname, clientLastname, clientPhone, clientMail, clientAdress, clientMessage, clientBuildingtype, clientRooms, clientStatus) VALUES ("' + firstname + '", "' + name + '", "' + phone + '", "' + mail + '", "' + adress + '", "' + message + '", "' + bien + '", ' + rooms + ', "' + status + '")', function (error, results) {
+  let query = "INSERT INTO client (clientFirstname, clientLastname, clientPhone, clientMail, clientAdress, clientMessage, clientBuildingtype, clientRooms, clientStatus) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
+  connection.query(query, [firstname, name, phone, mail, adress, message, bien, rooms, status], function (error, results) {
    if (error) {
      throw error;
    } else {
@@ -89,20 +91,25 @@ router.all('/api/newclient', function(req, res, next){
       var json =  JSON.parse(string);
       let objet = Object.values(json[0]);
       let id = objet[0];
-      connection.query('INSERT INTO meeting (meetingDate, meetingHours, ressourceID, clientID) VALUES ("' + req.body.date + '", "' + req.body.time + '", 1, "' + id + '")', function (error, results) {
+      let date = req.body.date;
+      let time = req.body.time;
+      let time2 = time.slice(0,5);
+
+      let query = "INSERT INTO meeting (meetingDate, meetingHours, ressourceID, clientID) VALUES (?, ?, 1, ?)";
+      connection.query(query, [date, time2, id], function (error, results) {
         if (error) {
           throw error;
         } else {
           let horaire;
-          if(req.body.time.slice(0,2) === "09") {
+          if(time.slice(0,2) === "09") {
             horaire = "disponibilityH1";
           }
-          else if (req.body.time.slice(0,2) === "12") {
+          else if (time.slice(0,2) === "12") {
             horaire = "disponibilityH2";
           } else {
             horaire = "disponibilityH3";
           }
-          connection.query('UPDATE disponibility SET `' + horaire + '` = "1" WHERE disponibilityDay = "' + req.body.date + '"', function (error, results) {
+          connection.query('UPDATE disponibility SET `' + horaire + '` = "1" WHERE disponibilityDay = ?', [date], function (error, results) {
             if (error) {
               throw error;
             } else {
